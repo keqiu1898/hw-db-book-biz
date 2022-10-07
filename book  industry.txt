@@ -1,0 +1,103 @@
+#############################    Part 1    #######################
+
+1. Create a list of the entities and properties of the book industry ?
+
+Entity1: Authors
+Property11: FirstName
+Property12: LastName
+Property13: Gender
+
+
+
+
+Entity2: Books
+Property21: ISBN
+Property22: BookName
+Property23: PublisherName
+
+
+
+Entity3: Publishers
+Property31: PublisherID
+Property31: PublisherName
+Property32: ZipCod
+
+
+
+Entity4: Editors
+Property41: EditorID
+Property42: FirstName
+Property42: LastName
+Property43: Gender
+
+
+
+
+Entity5: Orders
+Property51: OrderID
+Property52: OrderDate
+Property53: CustomerID
+Property54: Price
+
+
+
+Entity6: Customers
+Property61: CustomerID
+Property62: FirstName
+Property63: LastName
+Property64: Phone
+Property65: Email
+Property66: City
+Property67: Region
+Property68: Country
+
+
+Entity7: Genres
+Property71: GenreID
+Property72: Genre
+
+
+
+#############################    Part 2    #######################
+
+
+2. Create a list of the unique identifiers – primary keys.
+
+PK1: AuthorID
+PK2: ISBN
+PK3: PublisherID
+PK4: EditorID
+PK5: OrderID
+PK4: CustomerID
+PK5: GenreID
+
+
+
+
+
+#############################    Part 3    #######################
+
+3. Create a list of the table relationships – the cardinality between entities.
+Authors, Books, N:N 
+     Authors, BooksAuthors, 1:N
+     Books, BooksAuthors, 1:N
+
+Books, Editors, N:N 
+      Books, BooksEditors, 1:N
+      Editors, BooksEditors, 1:N 
+
+Books, Orders, N:N
+     Books, BooksOrders, 1:N
+     Orders, BooksOrders, 1:N
+
+Books, Genres, N:N
+     Books, BooksGenres, 1:N
+     Genres,  BooksGenres, 1:N
+
+Publishers, Book 1:N 
+
+Orders, Customers, 1:N
+
+
+
+
